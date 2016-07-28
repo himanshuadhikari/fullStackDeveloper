@@ -1,1 +1,1 @@
-# fullStackDeveloper
+# Angular.js Fullstack developer training app

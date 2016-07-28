@@ -1,0 +1,41 @@
+<html ng-app="myApp">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <script src="./scripts/angular.js"></script>
+    <script src="./scripts/angular-route.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/myController.js"></script>
+    <script src="./scripts/servicesCtrl.js"></script>
+    <script src="./scripts/productCtrl.js"></script>
+</head>
+
+<body ng-controller="myController">
+    <h1 class="{{myClass}}">{{message}}</h1>
+    <input class="{{myClass}}" ng-model="message" type="text" />
+    <button class="{{myClass}}" ng-click="changeColor()">{{message}}</button>
+    <ul style="list-style: none">
+        <li ng-repeat="color in colors">
+            <span ng-if="color.name !=='red'">
+            {{color.name}}
+        </span>
+        </li>
+    </ul>
+    <h1>{{user.firstName}}</h1>
+    <ul>
+        <li>
+            <a href="#/">home</a>
+        </li>
+        <li>
+            <a href="#/aboutus">about us</a>
+        </li>
+        <li>
+            <a href="#/services">services</a>
+        </li>
+        <li>
+            <a href="#/contactus">contactus</a>
+        </li>
+    </ul>
+    <div ng-view=""></div>
+</body>
+</html
